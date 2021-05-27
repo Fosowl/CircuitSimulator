@@ -24,16 +24,16 @@ namespace nts {
         public:
             Interpreter(vector<UnitPtr> chipsets);
             ~Interpreter();
-            int executeCommmand(string command);
+            int executeCommmand(const string& command);
             string getCommand();
             void exit();
             void display();
-            void setInput(string chip, string input);
+            void setInput(const string& chip, const string& input);
             void simulate();
             void loop() noexcept;
             void dump() noexcept;
             bool isLooping() noexcept;
-            Tristate getElectronFlow(Unit *chip, string pin);
+            Tristate getElectronFlow(Unit *chip, const string& targetPin);
             string getPinnedName(Unit *on, Unit *to) const;
         private:
             size_t tick_;

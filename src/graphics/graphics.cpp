@@ -7,7 +7,7 @@
 
 #include "graphics/graphics.hpp"
 
-Graphics::Graphics(int width, int height, int fps, std::string name)
+Graphics::Graphics(int width, int height, int fps, const std::string& name)
 {
     SetConfigFlags(FLAG_MSAA_4X_HINT);
     InitWindow(width, height, name.c_str());

@@ -35,7 +35,7 @@ nts::Interpreter::Interpreter(vector<UnitPtr> chipsets)
     }
 }
 
-int nts::Interpreter::executeCommmand(string command)
+int nts::Interpreter::executeCommmand(const string& command)
 {
     int ct = 1;
 
@@ -116,7 +116,7 @@ void insertElem(vector<mapElement> &elements, const Unit *chip)
     elements.insert(elements.end(), tmp);
 }
 
-void nts::Interpreter::setInput(string chip, string input)
+void nts::Interpreter::setInput(const string& chip, const string& input)
 {
     nts::Tristate state = UNDEFINED;
     string pin("1");
@@ -163,7 +163,7 @@ void nts::Interpreter::simulate()
     }
 }
 
-nts::Tristate nts::Interpreter::getElectronFlow(Unit *chip, string targetPin)
+nts::Tristate nts::Interpreter::getElectronFlow(Unit *chip, const string& targetPin)
 {
     nts::Tristate state = nts::UNDEFINED;
     Cable cable;

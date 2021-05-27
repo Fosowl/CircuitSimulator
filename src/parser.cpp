@@ -13,7 +13,7 @@ using string = std::string;
 
 using Unit = nts::AComponent;
 
-nts::Parser::Parser(string filename)
+nts::Parser::Parser(const string& filename)
 {
     ifstream file(filename);
     string content;
@@ -56,7 +56,7 @@ vector<string> nts::Parser::split_string(string str, string delim, string delim2
     vector<string> lines;
     unsigned int pos = 0;
     unsigned int sp = 0;
-    string token;
+    string token;;
     string curr_delim;
     const char *literal;
 
@@ -112,7 +112,7 @@ vector<UnitPtr> nts::Parser::getChipsets()
     return chipsets;
 }
 
-bool nts::Parser::hasChipset(string name)
+bool nts::Parser::hasChipset(const string& name)
 {
     for (auto const &curr : chipsets) {
         if (curr->getName() == name)

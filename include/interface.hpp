@@ -59,7 +59,7 @@ namespace nts{
     class AComponent : public IComponent {
         public:
             void sharedLinker(size_t pin, AComponent &other, size_t otherPin);
-            void sharedDumper(string name) const noexcept;
+            void sharedDumper(const string& name) const noexcept;
             Tristate sharedCompute(size_t pin);
 
             string getName() const { return name; };
@@ -68,13 +68,13 @@ namespace nts{
             string getType() const { return type; };
             void setType(string& _type) { type = _type; };
 
-            bool hasCable(string name) { return cables.find(name) != cables.end(); };
+            bool hasCable(const string& name) { return cables.find(name) != cables.end(); };
 
-            Tristate getState(string _name) const { return cables.find(_name)->second.state; };
+            Tristate getState(const string& _name) const { return cables.find(_name)->second.state; };
             void setState(string &_name, Tristate _state) { cables[_name].state = _state; };
 
-            AComponent *getPlug(string name) { return cables[name].pin; };
-            string getPinID(string name) { return cables[name].pin_id; };
+            AComponent *getPlug(const string& name) { return cables[name].pin; };
+            string getPinID(const string& name) { return cables[name].pin_id; };
             map<string, Cable> getCables() const { return cables; };
 
             class ALogics {

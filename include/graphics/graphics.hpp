@@ -25,7 +25,7 @@ using UnitPtr = std::shared_ptr<nts::AComponent>;
 
 class Graphics {
     public:
-        Graphics(int width, int height, int fps, string name);
+        Graphics(int width, int height, int fps, const string& name);
         ~Graphics();
 
         void initComponents(vector<UnitPtr> chipsets);

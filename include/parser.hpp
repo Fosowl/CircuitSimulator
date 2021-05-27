@@ -28,7 +28,7 @@ using UnitPtr = std::shared_ptr<nts::AComponent>;
 namespace nts {
     class Parser {
         public:
-            Parser(string filename);
+            Parser(const string& filename);
             ~Parser();
             vector<UnitPtr> getChipsets();
             void linkChipsets(vector<string> pin_1, vector<string> pin_2);
@@ -36,7 +36,7 @@ namespace nts {
             void remove_comment(string& str);
             void makeFactory();
             UnitPtr createComponent(string type);
-            bool hasChipset(string name);
+            bool hasChipset(const string& name);
         private:
             string filename;
             vector<shared_ptr<Unit>> chipsets;
