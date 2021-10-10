@@ -2,7 +2,7 @@
 
 ## This is a school project made during my second year at EPITECH commonly known as "NanoTekSpice". 
 
-<img src="./docs/circuits_png/and_or_not.png"></img>
+<img src="./docs/circuits_png/and_or_not.png">
 
 **Note :** There is not graphical interface but I may implement one some day if I have the time...
 
@@ -12,7 +12,7 @@
 
 This program is an electronic circuit simulator that build a graph of the connection between electronic component (such as chipsets, input, output, and some special components) from a configuration file and allow the user to change the state of the circuit input and run the simulation to see the result.
 
-**Special Components :**
+### Special Components :
 
 * input : a component with a single pin directly linked to the command line. Its value is initialized to `undefined`.
 
@@ -22,9 +22,9 @@ This program is an electronic circuit simulator that build a graph of the connec
 
 * false :  a component with a single pin that is always false.
 
-* output : : a component with a single pin used as the output of a circuit.
+* output : a component with a single pin used as the output of a circuit.
 
-**Chipsets Components :**
+### Chipsets Components :
 
 * 4001: Four NOR gates.
 * 4011: Four NAND gates.
@@ -41,6 +41,14 @@ This program is an electronic circuit simulator that build a graph of the connec
 * 4514: 4 bits decoder.
 * 4801: Random access memory.
 * 2716: Read only memory
+
+**4069 Schematics**
+
+<img src="./docs/circuits_png/4069.png">
+
+**4013 Schematics**
+
+<img src="./docs/circuits_png/4013 flip-flop.png">
 
 ****
 ## COMPILATION
@@ -74,7 +82,7 @@ The program then wait for entry in an infinite loop on the standard input, possi
 5. `dump` > pretty print the states of every **pins** just like the `display` command.
 6. `<input name>=0` set input to either `0` for false, `1` for true, or `U` for undefined.
 
-**execution exemple :**
+### execution exemple :
 
 ```
 ∼/user@fedora> ./nanotekspice or_gate.nts
@@ -92,7 +100,7 @@ s: 1
 
 ```
 
-**configuration file :**
+### configuration file :
 
 The `.nts` configuration files can be found under `docs/nts_single` or `docs/nts_advanced`, here is a very basic exemple : 
 
@@ -122,5 +130,3 @@ Let's break it down :
 
 - Inside the **links** section a link between 2 pin is declared as follow :
 `<given chipset name>:<pin number> <second chipset name>:<pin number>`
-
-
