@@ -32,7 +32,7 @@ void nts::AComponent::sharedLinker(size_t pin, AComponent &other, size_t otherPi
     other.cables[cvrt_2.str()].chipEntryPins.push_back(cvrt_1.str());
 }
 
-void nts::AComponent::sharedDumper(string name) const noexcept
+void nts::AComponent::sharedDumper(const string &name) const noexcept
 {
     string state = "Failure";
 

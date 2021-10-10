@@ -9,14 +9,14 @@
 
 Graphics::Graphics(int width, int height, int fps, const std::string& name)
 {
-    SetConfigFlags(FLAG_MSAA_4X_HINT);
-    InitWindow(width, height, name.c_str());
-    SetTargetFPS(fps);
+    //SetConfigFlags(FLAG_MSAA_4X_HINT);
+    //InitWindow(width, height, name.c_str());
+    //SetTargetFPS(fps);
 }
 
 Graphics::~Graphics()
 {
-    CloseWindow();
+    //CloseWindow();
 }
 
 // Public Methods
@@ -33,10 +33,11 @@ void Graphics::updateCircuitState()
 
 bool Graphics::displayBoard(nts::Interpreter interpreter)
 {
-    BeginDrawing();
-    ClearBackground(RAYWHITE);
-    EndDrawing();
-    return WindowShouldClose();
+    //BeginDrawing();
+    //ClearBackground(RAYWHITE);
+    //EndDrawing();
+    //return WindowShouldClose();
+    return false;
 }
 
 
