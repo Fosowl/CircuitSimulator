@@ -4,7 +4,7 @@
 
 <img src="./docs/circuits_png/and_or_not.png">
 
-**Note :** There is not graphical interface but I may implement one some day if I have the time...
+**Note :** There is not graphical interface, working on it...
 
 ****
 ## DESCRIPTION
